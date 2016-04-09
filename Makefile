@@ -19,3 +19,5 @@ uci: $(OBJS) uci.o
 
 clean:
 	rm -f *.o $(ENGINENAME)$(EXT).exe $(ENGINENAME)$(EXT)
+
+strip: strip joko.exe
