@@ -1,12 +1,10 @@
-/*******************************************************************************                                                                    
-						     Joko Tole Chess Engine
-						   Copyright (C) 2016 BOSDOT						
-             a lot inspired by chessprogramming.wikispaces.com and 
-		    many others engine stockfish, Gull, glaurung, fruit, etc    
-		   as long as no code is not fail at build engine can be used 
---------------------------------------------------------------------------------					 					  					  
+/*******************************************************************************
+ Joko Tole 1.0.0 beta Chess Engine Copyright (C) 2016 BOSDOT
+ a lot inspired by chessprogramming.wikispaces.com and many 
+ others engine stockfish, Gull, glaurung, fruit, etc
+ as long as no code is not fail at build engine can be used 
+--------------------------------------------------------------------------------
  ******************************************************************************/
- 
  
 #include <algorithm>
 #include <iostream>
@@ -16,7 +14,7 @@
 #include "evaluation.h"
 #define MSEED 161803398
 
-const int CenterDistance[64] = { // char is sufficient as well, also unsigned
+const int CenterDistance[64] = { 
   3, 3, 3, 3, 3, 3, 3, 3,
   3, 2, 2, 2, 2, 2, 2, 3,
   3, 2, 1, 1, 1, 1, 2, 3,
