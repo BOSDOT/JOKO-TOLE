@@ -23,12 +23,9 @@
 #include "search.h"
 
 using namespace std;
-
-void setPosition(string &input, vector<string> &inputVector, Board &board);
 vector<string> split(const string &s, char d);
 Board fenToBoard(string s);
 string boardToString(Board &board);
-void clearAll(Board &board);
 volatile bool isStop = true;
 extern TwoFoldStack twoFoldPositions[MAX_THREADS];
 
@@ -52,7 +49,6 @@ const vector<string> positions = {
     "8/2b3p1/4knNp/2p4P/1pPp1P2/1P1P1BPK/8/8 w - -"
 };
 
-
 int main(int argc, char** argv) {
 	
     string input;
@@ -65,14 +61,15 @@ int main(int argc, char** argv) {
     setMultiPV(DEFAULT_MULTI_PV);
     setNumThreads(DEFAULT_THREADS);
     Move bestMove = NULL_MOVE;
-	Board board = fenToBoard(startpos);
+    Board board = fenToBoard(startpos);
     initZobristTable();
     initInBetweenTable();
     initMagicTables(2563762638929852183ULL);
 
-    cout << name << " " << version << " dibuat oleh " << author << endl;
-   
-    while (input != "quit") {
+void setPosition(string &input, vector<string> &inputVector, Board &board);
+void clearAll(Board &board);
+
+while (input != "quit") {
         getline(cin, input);
         inputVector = split(input, ' ');
         cin.clear();
