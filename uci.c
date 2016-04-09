@@ -1,9 +1,9 @@
 /*******************************************************************************                                                                    
-						     Joko Tole Chess Engine
-						   Copyright (C) 2016 BOSDOT						
+			    Joko Tole Chess Engine
+			  Copyright (C) 2016 BOSDOT						
              a lot inspired by chessprogramming.wikispaces.com and 
-		    many others engine stockfish, Gull, glaurung, fruit, etc    
-		   as long as no code is not fail at build engine can be used 
+           many others engine stockfish, Gull, glaurung, fruit, etc 
+           as long as no code is not fail at build engine can be used 
 --------------------------------------------------------------------------------					 					  					  
  ******************************************************************************/
  
