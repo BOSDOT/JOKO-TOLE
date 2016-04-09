@@ -1,11 +1,16 @@
-# JOKO-TOLE 
-Joko Tole adalah UCI engine dan masih memtuhkan GUI untuk bekerja, semua file dikonversi oleh bosdot menggunakan file C, ini adalah mesin catur percobaan (experimet) dan tidak bermaksud meduplikat mesin catur lainnya, jika ingin mengubah atau memodifikasi agar mesin ini menjadi lebih kuat anda bisa menulis sendiri di pull request atau anda akan meggunakan atau mengklone sehingga anda akan medapatkan mesin yang lebih kuat dari pada mesin catur menjadi keturunan joko Tole.
+## JOKO-TOLE 
+Joko Tole 1.0.0 beta adalah UCI enginedan masih membutuhkan GUI seperti frizt, arena, winboard dan lainnya untuk bekerja, semua file dikonversi oleh bosdot menggunakan file C, Joko Tole 1.0.0 beta adalah mesin catur percobaan (experimet) atau pertama kali saya mencoba membuatnya walupun tidak murni namun ini adalah langkah awal agar mengerti tentang mesin catur, jika ingin mengubah atau memodifikasi agar mesin ini menjadi lebih kuat anda bisa menulis sendiri di pull request, terutama ditujukan buat master master program indonesia yang suka catur agar mesin catur Joko Tole bisa sekuat Bandung Bondowoso.
 
-# Isuue (masalah) 
-depth rendah
-high PV ( pvnodes Kn/sec sangat tinggi ini memungkinkan agar pencapaian lebih maksimal)
-belum support mainstream PC hanya menggunakan x64 untuk support popcnt mungkin ya mungkin tidak ( maybe yes maybe no support Popcnt)
-mesin ini masih tidak sempurna sehingga detailnya belum bisa saya jelaskan sangat dibutuhkan masukan dan saran dari progamer yang suka catur terutama dari Indo
+## UCI x32 / x64 tergantung mesin compile kamu, saya menggunakan mingw64
 
-Feature : Support Ramsize dan multi core CPU
+## Isu (masalah / problem) 
+Elo dibawah 2500 ( ELO 2000 - 2500 ) tergantunfg dari hasil test sukses
+Depth rendah
+nodes pencarian rendah
+nodes Kn/sec ( highspeed  Kn/sec ) sangat tinggi ini memungkinkan agar pencapaian lebih maksimal jika mungkin
+belum support mainstream PC BMI2 hanya menggunakan x64 
+Ragu untuk support popcnt mungkin ya mungkin tidak ( maybe yes maybe no support Popcnt)
+mesin ini masih belum sempurna sehingga detailnya belum bisa saya jelaskan 
+
+Feature : Support Rambooster dan  CPU Core
 lainnya saya tidak tahu ( experiment only)
