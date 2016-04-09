@@ -1,9 +1,8 @@
 /*******************************************************************************                                                                    
-						     Joko Tole Chess Engine
-						   Copyright (C) 2016 BOSDOT						
-             a lot inspired by chessprogramming.wikispaces.com and 
-		    many others engine stockfish, Gull, glaurung, fruit, etc    
-		   as long as no code is not fail at build engine can be used 
+Joko Tole Chess Engine Copyright (C) 2016 BOSDOT						
+a lot inspired by chessprogramming.wikispaces.com and 
+many others engine stockfish, Gull, glaurung, fruit, etc    
+as long as no code is not fail at build engine can be used 
 --------------------------------------------------------------------------------					 					  					  
  ******************************************************************************/
  
@@ -137,7 +136,7 @@ const int endgamePieceValues[6][64] = {
 }
 };
 
-// Mobility tables, with zero padding for pieces that cannot move up to 27 squares
+// Mobility tables
 const int mobilityscore[4][28] = {
 { // Knights
 -24,-13, -5,  2,  8, 13, 17, 21, 24,
@@ -218,13 +217,12 @@ const int NUM_bishop_BITS[64] = {
 
 static const int KingAttackWeightScale[16] =
 {
-	0, 24, 136, 210, 232, 246, 252, 253, 254, 255, 256, 256, 256, 256, 256, 256,	
+   0, 24, 136, 210, 232, 246, 252, 253, 254, 255, 256, 256, 256, 256, 256, 256,	
 };
 
-static const int scoreAttack[7] = {
-248, 271, 233, 201, 252, 259,
-  };
-
-
+static const int scoreAttack[7] = 
+{
+   248, 271, 233, 201, 252, 259,
+}; 
 
 #endif
