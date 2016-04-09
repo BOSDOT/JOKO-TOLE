@@ -4,12 +4,8 @@ Joko Tole adalah UCI engine dan masih memtuhkan GUI untuk bekerja, semua file di
 # Isuue (masalah) 
 depth rendah
 high PV ( pvnodes Kn/sec sangat tinggi ini memungkinkan agar pencapaian lebih maksimal)
-belum support mainstream PC hanya menggunakan x64
-untuk support popcnt mungkin ya mungkin tidak ( maybe yes maybe no support Popcnt)
-mesin ini masih tidak sempurna sehingga detailnya belum bisa saya jelaskan
+belum support mainstream PC hanya menggunakan x64 untuk support popcnt mungkin ya mungkin tidak ( maybe yes maybe no support Popcnt)
+mesin ini masih tidak sempurna sehingga detailnya belum bisa saya jelaskan sangat dibutuhkan masukan dan saran dari progamer yang suka catur terutama dari Indo
 
-# sangat dibutuhkan masukan dan saran dari progamer yang suka catur terutama dari Indo
-
-# Feature : Support Ramsize dan multi core CPU
-
-# lainnya saya tidak tahu ( experiment only)
+Feature : Support Ramsize dan multi core CPU
+lainnya saya tidak tahu ( experiment only)
