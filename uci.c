@@ -50,13 +50,12 @@ const vector<string> positions = {
     "5nk1/6pp/8/pNpp4/P7/1P1Pp3/6PP/6K1 w - -",
     "2r2rk1/1p2npp1/1q1b1nbp/p2p4/P2N3P/BPN1P3/4BPP1/2RQ1RK1 w - -",
     "8/2b3p1/4knNp/2p4P/1pPp1P2/1P1P1BPK/8/8 w - -"
-	
 };
 
 
 int main(int argc, char** argv) {
 	
-	string input;
+    string input;
     vector<string> inputVector;
     string name = "JOKO TOLE";
     string version = "1.0.0";
@@ -127,7 +126,7 @@ int main(int argc, char** argv) {
                 
                 int maxValue = value / MAX_TIME_FACTOR;
 
-// recurring time controls
+// Time controls Uci
                 it = find(inputVector.begin(), inputVector.end(), "movestogo");
                 if (it != inputVector.end()) {
                     it++;
@@ -136,7 +135,6 @@ int main(int argc, char** argv) {
                 }
                 else value /= MOVE_HORIZON;
                 
-// increment time controls
                 it = find(inputVector.begin(), inputVector.end(),
                         (color == WHITE) ? "winc" : "binc");
                 if (it != inputVector.end()) {
@@ -157,7 +155,8 @@ int main(int argc, char** argv) {
             if (inputVector.at(1) != "name" || inputVector.at(3) != "value") {
                 cout << "Invalid option format." << endl;
             }
-            else {
+            else 
+            {
                 if (inputVector.at(2) == "Threads" || inputVector.at(2) == "threads") {
                     int threads = stoi(inputVector.at(4));
                     if (threads < MIN_THREADS)
@@ -195,7 +194,7 @@ int main(int argc, char** argv) {
             }
         }
 
-//  Non UCI Commands
+//  Preview non UCI order
         else if (input == "board") cerr << boardToString(board);
         else if (input.substr(0, 5) == "perft" && inputVector.size() == 2) {
             int depth = stoi(inputVector.at(1));
@@ -269,7 +268,6 @@ void setPosition(string &input, vector<string> &inputVector, Board &board) {
             int endSq = 8 * (moveStr.at(3) - '1') + (moveStr.at(2) - 'a');
             int color = board.getPlayerToMove();
 			
-			
             bool isCapture = (bool)(INDEX_TO_BIT[endSq] & board.getAllPieces(color ^ 1));
             bool isPawnMove = (bool)(INDEX_TO_BIT[startSq] & board.getPieces(color, PAWNS));
             bool isKingMove = (bool)(INDEX_TO_BIT[startSq] & board.getPieces(color, KINGS));
@@ -292,18 +290,16 @@ void setPosition(string &input, vector<string> &inputVector, Board &board) {
             else if (isDoublePawn)
                 m = setFlags(m, MOVE_DOUBLE_PAWN);
             
-            // Record positions on two fold stack.
+// Record posisition
             twoFoldPositions[0].push(board.getZobristKey());
-            // The stack is cleared for captures, pawn moves, and castles, which are all
             if (isCapture || isPawnMove || isCastle)
                 twoFoldPositions[0].clear();
-
             board.doMove(m, color);
         }
     }
 }
 
-// Splits a string s with delimiter d.
+// Split String
 vector<string> split(const string &s, char d) {
     vector<string> v;
     stringstream ss(s);
@@ -321,7 +317,7 @@ Board fenToBoard(string s) {
     int sqCounter = -1;
     string pieceString = "PNBRQKpnbrqk";
     
-    // iterate through rows backwards
+// iterate through rows backwards
     for (int elem = 7; elem >= 0; elem--) {
         string rowAtElem = rows.at(elem);
         
@@ -366,4 +362,6 @@ string boardToString(Board &board) {
 void clearAll(Board &board) {
     clearTables();
     board = fenToBoard(startpos);
-}
+} 
+
+// end of UCI
