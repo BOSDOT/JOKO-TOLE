@@ -1,1 +1,2 @@
-# JOKO-TOLE is free chess engine created by Bosdot , use code alt of from wiki and others src engine
+# JOKO-TOLE 
+Joko Tole support uci x32 dan x64 tergantung darima anda mengkoversinya , Joko Tole dibuat oleh bosdot 2016, jika ingin mengubah atau memodifikasi gar lebih kuat anda bisa menulis di pull request atau anda gunakan sendiri sehingga akan menjadi mesin catur keturunan joko Tole, kamu bisa menggukan nama mesin caturmu menggunakan src ini kamu dapat dengan mudah compile dengan makefile. untuk mengedarkan lebih banyak atau memodifikasinya harus disertakan srcnya. jika kamu tidak faham  akupun juga tidak faham
