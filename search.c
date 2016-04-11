@@ -12,7 +12,6 @@
 #include <mutex>
 #include <thread>
 #include "zobrist.h"
-#include "hash.h"
 #include "search.h"
 #include "mover.h"
 #include "parameter.h"
