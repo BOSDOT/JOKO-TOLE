@@ -1,3 +1,7 @@
+## Joko Tole UCI Chess Engine Copyright(C) 2016 Bosdot (Javanese)
+## influenzed by chessprogramming.wikispaces.com and many others 
+## chess engine with open source code.
+
 CC          = g++
 CFLAGS      = -Wall -ansi -pedantic -msse3 -std=c++0x -g -O3 
 LDFLAGS     = -lpthread -flto
