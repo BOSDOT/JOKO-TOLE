@@ -1,8 +1,7 @@
 /*******************************************************************************                                                                    
- Joko Tole 1.0.0 beta Chess Engine Copyright (C) 2016 BOSDOT
- a lot inspired by chessprogramming.wikispaces.com and many 
- others engine stockfish, Gull, glaurung, fruit, etc
- as long as no code is not fail at build engine can be used 
+Joko Tole UCI Chess Engine Copyright(C) 2016 Bosdot (Javanese)
+influenzed by chessprogramming.wikispaces.com and many others 
+chess engine with open source code.
 --------------------------------------------------------------------------------					 					  					  
  ******************************************************************************/
  
@@ -215,9 +214,11 @@ private:
     uint64_t antiDiagAttacks(uint64_t occ, int single);
 			
 };
+
+#define UCI_H
 uint64_t perft(Board &b, int color, int depth, uint64_t &captures);
 
-const int DEFAULT_HASH_SIZE = 24;
+const int DEFAULT_HASH_SIZE = 64;
 const int MIN_HASH_SIZE = 1;
 const int MAX_HASH_SIZE = 8172;
 const int DEFAULT_MULTI_PV = 1;
